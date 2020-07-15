@@ -1,0 +1,45 @@
+.container{
+  margin: 25vh auto;
+}
+
+.pageBanner{
+  max-width: 90vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.imageBanner{
+  height: 100%;
+}
+
+.text{
+  position: fixed;
+  left: 50vw;
+  right: auto;
+  bottom: auto;
+  width:30vw;
+  color: #eee;
+}
+
+.title{
+  position: fixed;
+  top:10vh;
+  font-style: italic;
+}
+
+.description{
+  position: fixed;
+  top:75vh;
+  left: 15vw;
+  width: 50vw;
+}
+
+@media only screen and (max-width: 400px) {
+  .description{
+    position: fixed;
+    top:75vh;
+    left: 5vw;
+    width: 90vw;
+  }
+}
