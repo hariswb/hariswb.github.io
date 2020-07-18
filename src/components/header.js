@@ -9,11 +9,11 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `grey`,
+            color: `darkslategray`,
             textDecoration: `none`,
           }}
         >
-          <strong>{siteTitle}</strong>
+          {siteTitle}
         </Link>
       </h2>
     </div>

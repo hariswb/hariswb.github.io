@@ -4,9 +4,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Slide from "../components/slide"
 
-const shortcodes = { Slide }
 
 export default function Template ({ data }){
   const { mdx } = data
@@ -16,9 +14,7 @@ export default function Template ({ data }){
     <Layout>
       <Img fluid={featuredImgFluid}/>
       <h1>{ frontmatter.title }</h1>
-      <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
     </Layout>
   )
 }

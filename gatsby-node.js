@@ -1,10 +1,24 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+//GENERATE SLUGS
+const { createFilePath } = require("gatsby-source-filesystem")
 
-// You can delete this file if you're not using it
+exports.onCreateNode = ({node,actions,getNode})=>{
+  const {createNodeField} = actions
+  if (node.internal.type === "Mdx") {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      // Name of the field you are adding
+      name: "slug",
+      // Individual MDX node
+      node,
+      // Generated value based on filepath with "blog" prefix. you
+      // don't need a separating "/" before the value because
+      // createFilePath returns a path with the leading "/".
+      value: `projects${value}`,
+    })
+  }
+}
+
+//CREATE PAGES
 const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
@@ -43,3 +57,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 }
+

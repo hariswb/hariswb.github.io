@@ -14,8 +14,6 @@ import "./layout.css"
 import "./layout-custom.css"
 
 import { MDXProvider } from "@mdx-js/react"
-import { Slide } from "./slide"
-const shortcodes = { Slide }
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,8 +29,8 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <MDXProvider components={shortcodes}>{children}</MDXProvider>
+      <div className="container">
+        <MDXProvider>{children}</MDXProvider>
         <footer>
         </footer>
       </div>
