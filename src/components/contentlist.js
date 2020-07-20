@@ -2,10 +2,19 @@ import React from "react"
 import { useStaticQuery, graphql,Link } from "gatsby"
 import Img from "gatsby-image"
 import contentStyles from "./contentlist.module.css"
+import ViewPager from "../components/animatedslide"
 
 function ContentList(){
 	const data = useStaticQuery(graphql`
     query AllPagesMdx{
+        site {
+          siteMetadata {
+            description
+            about
+            author
+            credit
+          }
+        }
         allMdx {
           edges {
             node {
@@ -32,7 +41,10 @@ function ContentList(){
         }
       }
   	`)
-  	const {allMdx} = data
+  	const {allMdx, site} = data
+
+    const {siteMetadata} = site
+
   	const {edges} = allMdx
   	const post = edges.map(edge => (edge.node))
 
@@ -40,17 +52,26 @@ function ContentList(){
   		return (<div className={contentStyles.card}>
       					<div className={contentStyles.imageContainer}>
                   <Link to={node.fields.slug}>
-      						  <Img className={contentStyles.imageContainer} fluid={node.frontmatter.featured_image.childImageSharp.fluid}/>
+      						  <Img className={contentStyles.image} fluid={node.frontmatter.featured_image.childImageSharp.fluid}/>
                   </Link> 
       					</div>
-      					<div className={contentStyles.titleandlink}>   	 			
-       					</div>				
       				</div>)
   	})
 
+    const ccc = post.map(node=>{
+      return [node.fields.slug,node.frontmatter.featured_image.childImageSharp.fluid.src]
+    })
+
+    console.log(ccc)
 	return (
 		<div className={contentStyles.container}>
-			{contents}
+      <div className={contentStyles.animatedslide}>
+        <ViewPager featuredImages={ccc}/>
+      </div>
+      <div className={contentStyles.about}>
+        <p>{siteMetadata.about}</p>
+
+      </div>
 		</div>
 	)
 }

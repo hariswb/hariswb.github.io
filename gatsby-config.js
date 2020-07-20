@@ -4,6 +4,10 @@
     description: `A portfolio`,
     credit: 'Powered by GatsbyJs',
     author: `hariswb`,
+    about: `Hi, Welcome to my portfolio page! I'm a junior developer with self taught experience. I create simple web app and looking forward to work in a team especially within data visualization domain.`,
+    twitter: "@example",
+    github: "hariswb",
+    email: "heyhey"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

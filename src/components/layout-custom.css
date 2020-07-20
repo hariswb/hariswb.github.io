@@ -1,14 +1,56 @@
+h1, h2, h3, h4, h5, p, code {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5{
+  padding-top: 20px;
+}
+
 .nav{
   position: absolute;
   top: 10px;
-  left: 10px;
-  display: block;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0 auto 0 auto;
+  /*display: block;*/
+}
+
+.navbox {
+  /*background-color: blue;*/
+  /*padding:10px 10px 10 px 10px;*/
 }
 
 .container{
 	max-width: 800px;
 	margin: auto;
-	margin: 10px;
-	margin-top: 50px;
+  margin-top:80px;
 }
 
+
+
+
+/*FOOTER*/
+
+.footer{
+  position: sticky;
+  margin: auto;
+  max-width: 800px;
+  height: 45px;
+  margin-top: ;
+  background-color: ivory;
+}
+
+.links{
+  position: sticky;
+  width: 104px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.contact-logo{
+  height: 30px;
+  /*background-color: teal;*/
+  border-radius: ;
+}

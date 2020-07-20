@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+    segoe ui, arial, sans-serif;
+}
+
+.tempat{
+	position: relative;
+    overflow: hidden;
+    width: 100%;
+  	height: 100%;
+  	cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39,auto);
+}
+
+.tempat > div{
+    position: absolute;
+  	width: 	100%;
+  	height: 100%;
+  	will-change: transform;
+  }
+
+ .tempat > div > div{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	will-change: transform;
+	box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  }
+
+  .link{
+  	width: 100px;
+  	height: 30px;
+  	background-color: ivory;
+  	position: absolute;
+  	bottom: 10%;
+  	left: calc(50% - 50px);
+  	border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+    box-shadow: 0 0 0 0 rgba(50, 50, 73, 0.5), 0 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+
+  }
+
+  .link:hover{
+    background-color: beige;
+  }
+
+  /*READ MORE ICON*/
+
+  .readmore{
+    width: 45px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)
+  }

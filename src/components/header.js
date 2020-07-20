@@ -5,6 +5,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header>
     <div className="nav">
+      <div className="navbox">
       <h2>
         <Link
           to="/"
@@ -16,6 +17,8 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h2>
+      </div>
+
     </div>
   </header>
 )

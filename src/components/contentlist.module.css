@@ -2,7 +2,12 @@
 	/*background-color: pink;*/
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
+}
+.animatedslide{
+	max-width: 800px;
+	height:40vh;
+	overscroll-behavior-y: contain;
 }
 .card{
 	margin-top: 10px;
@@ -17,13 +22,15 @@
 	max-width: 500px;
 	/*background-color: maroon;*/
 }
+.image{
+	border-radius: 10px;	
+}
 
 .titleandlink{
 	display: flex;
 	flex-direction: column;
 	margin-left: 20px;
 }
-
 .title{
 	/*background-color: teal;*/
 }
@@ -43,6 +50,15 @@
 	border:none;
 	border-radius: 20px;
   	/*background: radial-gradient(ellipse, teal 0%, beige 100%);*/
+}
+
+.about{
+	max-width: 500px;
+	height: 200px;
+	margin: auto;
+	margin-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 @media only screen and (max-width: 650px) {
