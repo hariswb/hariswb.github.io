@@ -1,3 +1,7 @@
 module.exports = {
-	assetsDir:""
+	assetsDir:"",
+	runtimeCompiler:true,
+	resolve:{
+		alias:"vue/dist/vue.esm-bundler.js"
+	}
 }
