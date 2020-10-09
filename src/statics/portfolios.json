@@ -1,0 +1,23 @@
+[
+    {
+        "id":3,
+        "title": "Network Narrative",
+        "demoUrl":"https://www.hariswb.com/networknarrative/",
+        "repoUrl":"https://github.com/hariswb/networknarrative",
+        "article":"This project is an experiment of reviewing Les Miserables novel by its social network with the help of interractive dashboard which could show some characters information and a number of measurements usually used in social network analysis. The dashboard user interface is designed in a way information about the network could come gradually to the user. Click is the major gesture to interract with the network."
+    },
+    {
+        "id":2,
+        "title": "Community Detection",
+        "demoUrl":"",
+        "repoUrl":"https://github.com/hariswb/ga-community-detection",
+        "article":"From time to time, social network analysis requires us to classify the number of groups from a given network. This simple module is a python implementation of a locus based genetic algorithm for community detection. This algorithm is particularly good at detecting communities in which we don't know their number beforehand. This algorithm finds communities by its structure: it classifies densely connected nodes into a group. Although it runs slowly, this algorithm will help us in preliminary analysis of a social network."
+    },
+    {   
+        "id":1,
+        "title": "Covid-19 Dashboard",
+        "demoUrl":"https://www.hariswb.com/covid19/",
+        "repoUrl":"https://github.com/hariswb/covid19/tree/master",
+        "article":"This project was bootstrapped with Create React App. Data visualization using D3 Covid-19 data provided by CovidApi News list provided by NewsApi"
+    }
+]

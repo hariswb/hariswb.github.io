@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { VueComponent} from '../pages/resume.md';
+import { VueComponent} from '../markdowns/resume.md';
 export default {
   components: {
     MarkdownContent: VueComponent
