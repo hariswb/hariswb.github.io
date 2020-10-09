@@ -2,14 +2,17 @@
   <div>
     <router-link to="/">Home</router-link>
   </div>
-  <h1>resume</h1>
+  <div>
+    <markdown-content />
+  </div>
 </template>
 
 <script>
-import { attributes } from '../data/resume.md';
-
-console.log(attributes)
+import { VueComponent} from '../pages/resume.md';
 export default {
-  
+  components: {
+    MarkdownContent: VueComponent
+  }
 }
+
 </script>
