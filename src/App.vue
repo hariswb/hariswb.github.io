@@ -1,10 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
-  <div>
-      <router-link to="/foo">Foo</router-link> |
-      <router-link to="/bar">Bar</router-link>
-  </div>
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+  <!-- <HelloWorld msg="Hello Vue 3.0 + Vite" /> -->
+  <!-- <div>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/portfolio">Portfolio</router-link> |
+      <router-link to="/resume">Resume</router-link> 
+  </div> -->
   <router-view />
 </template>
 
