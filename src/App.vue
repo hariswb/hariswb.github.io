@@ -6,7 +6,9 @@
       <router-link to="/portfolio">Portfolio</router-link> |
       <router-link to="/resume">Resume</router-link> 
   </div> -->
-  <router-view />
+  <div class="app-container">
+    <router-view />
+  </div>
 </template>
 
 <script>

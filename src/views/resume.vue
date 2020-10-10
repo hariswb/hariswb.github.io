@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <router-link to="/">Home</router-link>
-  </div>
+  <Nav page="Resume"/>
   <div>
     <markdown-content />
   </div>
@@ -9,9 +7,12 @@
 
 <script>
 import { VueComponent} from '../markdowns/resume.md';
+import Nav from "../components/nav.vue"
+
 export default {
   components: {
-    MarkdownContent: VueComponent
+    MarkdownContent: VueComponent,
+    Nav
   }
 }
 
