@@ -56,13 +56,11 @@ export default {
     margin: 0;
     margin-top: 100px;
     padding: 0;
-    
   }
   .title button{
     border:none;
     background-color:var(--main-bg-color);
     padding: 0;
-    
   }
 
   h3{

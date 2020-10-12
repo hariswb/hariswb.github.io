@@ -7,7 +7,7 @@
                     name="Portfolio"
                     height="40px" 
                     width="120px" 
-                    radius="5px"
+                    radius="20px"
                 />
             </router-link> 
         </li>
@@ -17,7 +17,7 @@
                     name="Resume"
                     height="40px" 
                     width="120px" 
-                    radius="5px"
+                    radius="20px"
                 />
             </router-link> 
         </li>

@@ -29,8 +29,14 @@ export default {
         margin:5px;
         background-color: var(--main-bg-color);
         box-shadow: 
-            -1px -2px 4px rgb(255, 255, 255),
-            1px 2px 4px rgb(209, 209, 209);
+            /* Top Left */
+            -0.5px -0.5px 1px rgb(255, 255, 255),
+            inset 1px 1px 2px rgb(255, 255, 255),
+            inset 2px 5px 4px rgba(0, 0, 0, 0),
+            /* Bottom Right */
+            0.5px 0.5px 1px rgba(0, 0, 0, 0.089),
+            inset -1px -1px 2px rgba(0, 0, 0, 0.068),
+            inset -2px -5px 4px rgba(255, 255, 255, 0);
         transition:  all 0.2s ease 0.05s;
         font-optical-sizing: auto;
         color:rgb(107, 107, 107);
@@ -40,14 +46,22 @@ export default {
     }
     .button:hover{
         box-shadow: 
-            -1px -2px 4px rgb(255, 255, 255),
-            1px 2px 4px rgb(209, 209, 209),
-            inset -1px -2px 1px rgb(231, 231, 231),
-            inset 1px 2px 1px rgb(255, 255, 255),
-            inset -2px -3px 6px rgb(255, 255, 255),
-            inset 2px 2px 3px rgb(238, 238, 238);
-        transform: scale(0.95);
-        color:rgb(43, 43, 43);
+            /* Top Left */
+            -1px -1px 1px rgb(255, 255, 255),
+            inset 1px 2px 2px rgb(255, 255, 255),
+            inset 2px 5px 4px rgba(0, 0, 0, 0.055),
+            /* Bottom Right */
+            1px 1px 1px rgba(0, 0, 0, 0.089),
+            inset -1px -2px 2px rgba(0, 0, 0, 0.068),
+            inset -2px -5px 4px rgba(255, 255, 255, 0.658);
+           
+        transform: scale(0.97);
+        color:rgb(71, 71, 71);
     }
-    
+            /* -0.5px -0.5px 1px rgb(255, 255, 255),
+            inset 2px 4px 2px rgb(255, 255, 255),
+            inset 2px 5px 4px rgba(0, 0, 0, 0),
+            0.5px 0.5px 1px rgba(0, 0, 0, 0.089),
+            inset -2px -4px 2px rgba(0, 0, 0, 0.068),
+            inset -2px -5px 4px rgba(255, 255, 255, 0); */
 </style>

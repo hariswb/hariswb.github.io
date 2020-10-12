@@ -6,7 +6,7 @@
                     name="<"
                     height="30px" 
                     width="30px" 
-                    radius="5px"
+                    radius="15px"
                 />
             </router-link> 
         </li>
