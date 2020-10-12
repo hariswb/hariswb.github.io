@@ -4,12 +4,16 @@
     <li v-for="item in portfolios" :key="item.id">
       <div class="title" @click="handleSelect(item.id)">
         <button>
-          <h3 class="">{{item.title}}</h3>
+          <h3>{{item.title}}</h3>
         </button>
       </div>
-      <div class="content" v-show="shown(item.id)">
-        <MyButton name="Live" :url="item.demoUrl" height="30px" width="70px" radius="30px"/>
-        <MyButton name="Repo" :url="item.repoUrl" height="30px" width="70px" radius="30px"/>
+      <div class="content" v-show="showContent(item.id)">
+        <a :href="item.demoUrl" target="_blank" v-show="showLink(item.demoUrl)">
+          <MyButton name="Live" height="30px" width="70px" radius="30px"/>
+        </a>
+        <a :href="item.repoUrl" target="_blank" v-show="showLink(item.repoUrl)">
+          <MyButton name="Repo" height="30px" width="70px" radius="30px"/>
+        </a>
         <p>{{item.article}}</p>
       </div>
     </li>
@@ -36,8 +40,11 @@ export default {
     handleSelect(id){
       this.selected = id
     },
-    shown(id){
+    showContent(id){
       return id==this.selected?true:false
+    },
+    showLink(url){
+      return url.length>0?true:false
     }
   },
 }
@@ -49,15 +56,19 @@ export default {
     margin: 0;
     margin-top: 100px;
     padding: 0;
+    
   }
   .title button{
     border:none;
     background-color:var(--main-bg-color);
     padding: 0;
+    
   }
+
   h3{
     font-size: 1.2rem;
     margin:10px 0 10px 5px;
+    color: rgb(61, 61, 61);
   }
   li {
     max-width: 400px; 
@@ -68,6 +79,7 @@ export default {
   }
   p{
     text-align: left;
+    font-size: 1.1rem;
   }
   @media only screen and (min-width: 600px) {
     .portfolio {

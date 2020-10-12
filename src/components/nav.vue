@@ -2,9 +2,12 @@
     <ul class="nav no-print">
         <li class="back">
             <router-link to="/">
-                <button class="button">
-                    <img class="img-button" src="../assets/backbutton.png">
-                </button>
+                <MyButton
+                    name="<"
+                    height="30px" 
+                    width="30px" 
+                    radius="5px"
+                />
             </router-link> 
         </li>
         <li class="legend">
@@ -42,7 +45,7 @@ export default {
     .legend{
         width: 54%;
         color:rgb(116, 116, 116);
-        margin-left: cnter;
+        margin-left: center;
     }
     .button{
         height: 20px;

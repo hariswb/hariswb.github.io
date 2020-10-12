@@ -2,15 +2,38 @@
     <div class="container">
     <ul class="home">
         <li>
-            <router-link to="/portfolio"><button>Portfolio</button></router-link> 
+            <router-link to="/portfolio">
+                <MyButton
+                    name="Portfolio"
+                    height="40px" 
+                    width="120px" 
+                    radius="5px"
+                />
+            </router-link> 
         </li>
         <li>
-            <router-link to="/resume"><button>Resume</button></router-link> 
+            <router-link to="/resume">
+                 <MyButton
+                    name="Resume"
+                    height="40px" 
+                    width="120px" 
+                    radius="5px"
+                />
+            </router-link> 
         </li>
     </ul>
     </div>
 
 </template>
+
+<script>
+import MyButton from "../components/button.vue"
+export default {
+    components: {
+        MyButton,
+    }    
+}
+</script>
 
 <style scoped>
     .container{
@@ -22,11 +45,5 @@
         text-align: center;
         padding-top: 100px;
     }
-    button{
-        border: 0.1px solid black;
-        border-radius: 15px;
-        height: 30px;
-        width: 100px;
-        margin: 10px;
-    }
+    
 </style>
