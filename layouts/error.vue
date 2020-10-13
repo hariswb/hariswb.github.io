@@ -1,13 +1,12 @@
 <template>
-    <div class="container">
+    <div class="error-page">
         <div class="quote">
             <p>Not knowing the name of the tree,<br>
                 I stood in the flood<br>
                 of its sweet scent.<br>
             </p>
-            <p>― Matsuo Bashō</p>
+            <p class="name">― Matsuo Bashō</p>
         </div>
-        
         <div class="home-button">
         <router-link to="/">
         <MyButton
@@ -23,23 +22,28 @@
 
 <script>
 export default {
+    props: ['error'],
+    layout: 'default'
 }
 </script>
 
 <style scoped>
-    .container{
-        margin:20% auto;
+    .error-page{
+        margin-top:200px;
     }
-     .quote{
-            margin-left:10%;
-        }
-    @media screen and (min-width: 600px){
-        .quote{
-            margin-left:30%;
-        }
+    .quote{
+        margin-left:10%;
+        max-width: 400px;
     }
-
+    .name{
+        text-align: right;
+    }
     .home-button{
         text-align:center;
+    }
+    @media screen and (min-width: 600px){
+        .quote{
+            margin-left:25%;
+        }
     }
 </style>

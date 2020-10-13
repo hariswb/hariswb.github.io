@@ -1,33 +1,38 @@
 <template>
   <div class="container">
     <ul class="home">
-        <li>
-            <NuxtLink to="/portfolio">
+        <li v-for="link in links" :key="link.name">
+            <NuxtLink  :to="link.path">
                 <MyButton
-                    name="Portfolio"
+                    :name="link.name"
                     height="40px" 
                     width="120px" 
                     radius="20px"
                 />
-            </NuxtLink> 
-        </li>
-        <li>
-            <NuxtLink to="/resume">
-                 <MyButton
-                    name="Resume"
-                    height="40px" 
-                    width="120px" 
-                    radius="20px"
-                />
-            </NuxtLink> 
+            </NuxtLink>
         </li>
     </ul>
-    </div>
+  </div>
 </template>
 
 <script>
 export default {
-
+    data(){
+        return {
+            links:[]
+        }
+    },
+    created() {
+        this.$router.options.routes
+            .forEach(route => {
+                if(route.path!=="/"){
+                    this.links.push({
+                    name:route.name.toUpperCase(),
+                    path:route.path
+                })
+                }
+            });    
+    }
 }
 </script>
 

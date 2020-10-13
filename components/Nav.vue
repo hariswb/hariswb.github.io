@@ -42,18 +42,4 @@ export default {
         color:rgb(116, 116, 116);
         margin-left: center;
     }
-    .button{
-        height: 20px;
-        width: 30px;
-        background-color:var(--main-bg-color);
-        border: 0px solid black;
-        border-radius: 3px;
-        padding:3x; 
-        margin:auto;
-    }
-    .img-button{
-        max-height: 70%;
-        max-width: 60px;
-        margin:auto;
-    }
 </style>
