@@ -1,7 +1,9 @@
 .cache
 package.json
 package-lock.json
-public
+static
 dist
 .gitignore
 gitignore
+.nuxt
+node_modules
