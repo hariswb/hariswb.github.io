@@ -14,6 +14,7 @@ const routes = [
 
 const router = new createRouter({
     history:createWebHistory(),
+    mode:"hash",
     routes,
 })
 

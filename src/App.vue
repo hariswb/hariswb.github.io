@@ -12,6 +12,7 @@
 </template>
 
 <script>
+console.log(window.location)
 
 export default {
   name: 'App',
