@@ -1,7 +1,9 @@
 <template>
 <div>
   <Nav page="Resume"/>
-  <nuxt-content :document="page" />
+  <div class="md-content">
+    <nuxt-content :document="page" />
+  </div>
 </div>
 </template>
 
@@ -15,3 +17,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.md-content{
+  /* background-color: aquamarine; */
+  font-size:0.9rem;
+}
+.md-content table{
+  background-color: blue;
+}
+</style>>
