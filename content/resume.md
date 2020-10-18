@@ -4,7 +4,6 @@ description: Personal resume. It's online and printable!
 name: Haris Wirabrata
 details:
   - Indonesia, GMT+7
-  - email@somewhere.com
   - github.com/hariswb/
 ---
 ### SOFTWARE PROJECTS
@@ -19,7 +18,7 @@ details:
 #### Community Detection  ( [Repo](https://github.com/hariswb/ga-community-detection) )
 - An implementation of genetic algorithm for community detection of a given social network.
 - This algorithm emulate the concept of natural selection to search an optimum way to put a social network into groups. It is built with python's pandas and networkx.
-- This project challenged me to learn genetic algorithm and some math theories which were new to me. I could get through it by slowing down my learning process like a baby learning to walk.
+- This project challenged me to learn genetic algorithm and some math theories which were new to me. 
  
 #### Covid-19 Dashboard  ( [Live](https://www.hariswb.com/covid19/) | [Repo](https://github.com/hariswb/covid19) ) 
 - A dashboard which visualizing the spread of COVID-19 pandemic in the countries around the globe alongside some news' headlines a the country in question.  
@@ -48,4 +47,4 @@ Responsible for the maintance and online visual presentation of a collection of 
 - Making product photography with dramatic lights on to enhance the presence of their unique builds.
 
 ### Tech Skills
-Javascript, React, D3, Vue, Python, Pandas  
+Javascript, React, D3, Vue, Python
