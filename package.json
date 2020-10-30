@@ -1,0 +1,30 @@
+{
+  "name": "hariswb",
+  "version": "0.1.0",
+  "description": "A personal landing page",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hariswb/hariswb.github.io.git"
+  },
+  "author": "hariswb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hariswb/hariswb.github.io/issues"
+  },
+  "homepage": "http://hariswb.github.io/hariswb.github.io",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.10.0",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}

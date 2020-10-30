@@ -4,6 +4,7 @@ description: Personal resume. It's online and printable!
 name: Haris Wirabrata
 details:
   - Indonesia, GMT+7
+  - hariswb@gmail.com
   - github.com/hariswb/
 ---
 ### SOFTWARE PROJECTS
@@ -47,4 +48,4 @@ Responsible for the maintance and online visual presentation of a collection of 
 - Making product photography with dramatic lights on to enhance the presence of their unique builds.
 
 ### Tech Skills
-Javascript, React, D3, Vue, Python
+Javascript, React, D3, Vue, Python, Pandas

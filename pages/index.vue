@@ -25,7 +25,7 @@ export default {
     created() {
         this.$router.options.routes
             .forEach(route => {
-                if(route.path!=="/"){
+                if(route.path!=="/" && route.path!=="/covid19"){
                     this.links.push({
                     name:route.name.toUpperCase(),
                     path:route.path
