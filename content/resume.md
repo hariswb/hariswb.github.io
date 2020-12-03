@@ -6,6 +6,7 @@ details:
   - Indonesia, GMT+7
   - hariswb@gmail.com
   - github.com/hariswb/
+  - hariswb.com
 ---
 ### SOFTWARE PROJECTS
 
