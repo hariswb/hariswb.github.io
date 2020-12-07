@@ -14,7 +14,7 @@
 }
 
 body{
-  --main-bg-color: rgb(228, 228, 228);
+  --main-bg-color: rgb(221, 221, 221);
   background-color:var(--main-bg-color);
   font-family: "Heebo", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
