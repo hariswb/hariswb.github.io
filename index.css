@@ -1,107 +1,152 @@
+:root {
+  --bg: #DFC5B2;
+  --accent: #9D345E;
+  --text: #171515;
+  --text-muted: #3d2626;
+  --border: rgba(23, 21, 21, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Source Code Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
+  font-family: "Lora", Georgia, serif;
+  color: var(--text);
+  line-height: 1.75;
   padding: 60px 20px;
-  background: #f8f9fa;
+  background-color: var(--bg);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px 300px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 60px;
+  position: relative;
 }
 
 h1 {
-  font-family: "Sixtyfour", sans-serif;
-  font-size: 2rem;
+  font-family: "Jacquard 24", serif;
+  font-size: 3.5rem;
   font-weight: 400;
-  margin-bottom: 30px;
-  color: #000;
-  letter-spacing: 4px;
+  margin-bottom: 32px;
+  color: var(--accent);
+  letter-spacing: 6px;
+  line-height: 1;
 }
 
 .intro {
   font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 50px;
-  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 52px;
+  line-height: 1.85;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-family: "Lora", serif;
+  font-size: 0.7rem;
   font-weight: 600;
-  margin-bottom: 30px;
-  color: #000;
-  border-bottom: 1px solid #000;
+  margin-bottom: 32px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
   padding-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
 .project {
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  padding-bottom: 36px;
+  padding-top: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.project + .project {
+  padding-top: 36px;
+}
+
+.project:last-of-type {
+  border-bottom: none;
 }
 
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .project-name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #000;
+  color: var(--text);
+  letter-spacing: 0.3px;
 }
 
 .project-year {
-  font-size: 0.9rem;
-  color: #888;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 .project-about {
-  color: #666;
-  margin-bottom: 15px;
+  color: var(--text);
+  margin-bottom: 14px;
+  font-size: 0.92rem;
+  line-height: 1.75;
 }
 
 .project-links a {
   display: inline-block;
-  margin-right: 15px;
-  color: #0066cc;
+  margin-right: 16px;
+  color: var(--accent);
   text-decoration: none;
+  font-size: 0.88rem;
   font-weight: 500;
-  transition: all 0.2s;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
 }
 
 .project-links a:hover {
-  color: #004499;
-  text-decoration: underline;
+  border-bottom-color: var(--accent);
 }
 
 .footer {
-  margin-top: 60px;
-  padding-top: 30px;
-  border-top: 1px solid #ddd;
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
   display: flex;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .footer a {
-  color: #0066cc;
+  color: var(--text-muted);
   text-decoration: none;
-  font-weight: 500;
+  font-size: 0.88rem;
   transition: color 0.2s;
 }
 
 .footer a:hover {
-  color: #004499;
-  text-decoration: underline;
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -110,10 +155,6 @@ h2 {
   }
 
   h1 {
-    font-size: 2rem;
-  }
-
-  .intro {
-    font-size: 1rem;
+    font-size: 2.8rem;
   }
 }
